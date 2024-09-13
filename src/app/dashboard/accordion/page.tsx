@@ -18,7 +18,7 @@ const items = [
   }
 ]
 
-export default function AccordionPage() {
+export default function Page() {
   return (
     <Accordion type="single" collapsible className="w-full">
       {items.map((item) => (

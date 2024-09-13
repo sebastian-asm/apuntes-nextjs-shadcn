@@ -1,9 +1,32 @@
 import Link from 'next/link'
 
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+
 const links = [
   { name: 'accordion', href: 'accordion' },
-  { name: 'alert', href: 'alert' }
-]
+  { name: 'alert', href: 'alert' },
+  { name: 'button', href: 'button' },
+  { name: 'alert-dialog', href: 'alert-dialog' },
+  { name: 'dialog', href: 'dialog' },
+  { name: 'badge', href: 'badge' },
+  { name: 'calendar', href: 'calendar' },
+  { name: 'avatar', href: 'avatar' },
+  { name: 'card', href: 'card' },
+  { name: 'carousel', href: 'carousel' },
+  { name: 'checkbox', href: 'checkbox' },
+  { name: 'command', href: 'command' },
+  { name: 'combobox', href: 'combobox' },
+  { name: 'context-menu', href: 'context-menu' },
+  { name: 'menu-bar', href: 'menu-bar' },
+  { name: 'input-otp', href: 'input-otp' },
+  { name: 'progress', href: 'progress' },
+  { name: 'sheet', href: 'sheet' },
+  { name: 'skeleton', href: 'skeleton' },
+  { name: 'slider', href: 'slider' },
+  { name: 'sonner', href: 'sonner' },
+  { name: 'toast', href: 'toast' },
+  { name: 'tabs', href: 'tabs' }
+].sort((a, b) => a.name.localeCompare(b.name))
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -76,10 +99,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               </a>
             </div>
             <div className="flex items-center">
-              {/* User Avatar */}
-              <div className="bg-blue-500 text-white p-2 rounded-full w-12 h-12 flex items-center justify-center">
-                FH
-              </div>
+              <Avatar>
+                <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
             </div>
           </div>
         </div>
